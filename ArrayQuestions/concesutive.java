@@ -1,4 +1,5 @@
 // Find the longest consecutive sequence.
+import java.util.*;
 
 class concesutive{
 
@@ -6,6 +7,7 @@ class concesutive{
 		int arr[]={12,2,5,6,8,9,10,11};
 
 		bruteForceApproach(arr);
+		hashset(arr);
 
 
 	}
@@ -46,5 +48,36 @@ class concesutive{
         System.out.println("Longest consecutive sequence length: " + longest);
 
 
+	}
+
+	public static void hashset(int arr[]){
+
+		 HashSet<Integer> set = new HashSet<>();
+
+		 for(int num:arr){
+		 	set.add(num);
+
+		 }
+
+		 int longest=0;
+
+		 for(int num:set){
+
+		 	if(!set.contains(num-1)){
+
+		 		int current=num;
+		 		int count=1;
+
+		 		while(set.contains(current+1)){
+		 			current++;
+		 			count++;
+
+		 		}
+		 		longest=Math.max(longest,count);
+
+		 	}
+		 	
+		 }
+		 System.out.println(longest);
 	}
 }
