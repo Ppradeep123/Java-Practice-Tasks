@@ -5,6 +5,8 @@ class smallestmissing{
 
 		smallestmissing(arr);
 
+		cyclicSort(arr);
+
 	}
 
 	   public static void smallestmissing(int arr[]) {
@@ -30,5 +32,35 @@ class smallestmissing{
 
             missing++;
         }
+    }
+
+    public static void cyclicSort(int arr[]){
+
+    	int i=0;
+
+    	while(i<arr.length){
+
+    		int currentIndex=arr[i]-1;
+
+    		if(arr[i]>=1 && arr[i]<=arr.length && arr[i]!=arr[currentIndex]){
+
+    			int temp=arr[i];
+    			arr[i]=arr[currentIndex];
+    			arr[currentIndex]= temp;
+    		}
+    		else{
+    			i++;
+    		}
+    	}
+    	 for (int j = 0; j < arr.length; j++) {
+
+            if (arr[j] != j + 1) {
+                System.out.println("Smallest missing: " + (j + 1));
+                return;
+            }
+        }
+
+        System.out.println("Smallest missing: " + (arr.length + 1));
+    
     }
 }
