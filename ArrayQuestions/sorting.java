@@ -1,4 +1,4 @@
-// Sort an array containing only 0s, 1s and 2s without using built-in sorting.
+
 
 class sorting{
 	public static void main(String[] args) {
