@@ -28,9 +28,9 @@ class longestsubarray {
                 }
             }
 
-            // if (!map.containsKey(prefixSum)) {
-            //     map.put(prefixSum, i);
-            // }
+            if (!map.containsKey(prefixSum)) {
+                map.put(prefixSum, i);
+            }
         }
 
         System.out.println("Longest Subarray Length: " + maxLength);

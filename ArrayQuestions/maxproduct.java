@@ -57,7 +57,7 @@ class maxproduct {
 
 
        int maxproduct = Math.max(largest*secondlg,smallest*secondsmallest);
-    	System.out.println(maxproduct);
+    	System.out.println( maxproduct);
 
     }
 }

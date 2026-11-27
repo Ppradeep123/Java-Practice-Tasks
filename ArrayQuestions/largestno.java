@@ -11,3 +11,5 @@ int max=0;
 		System.out.println(max);
 	}
 }
+
+// find the largest element from array
